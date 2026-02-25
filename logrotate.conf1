@@ -1,0 +1,33 @@
+# see "man logrotate" for details
+/opt/hq-rtr/*.log
+/opt/br-rtr/*.log
+/opt/br-srv/*.log
+{
+minsize 10M
+# global options do not affect preceding include directives
+
+# rotate log files weekly
+weekly
+
+# keep 4 weeks worth of backlogs
+rotate 4
+
+# create new (empty) log files after rotating old ones
+create
+
+# comment this out if you want your log files remain uncompressed
+compress
+}
+# do not rotate empty log files
+notifempty
+
+# uncomment this if you want to use date as a suffix for rotated files
+#dateext
+
+# logs are moved into this directory for rotation
+#olddir old
+
+# packages drop log rotation information into this directory
+include /etc/logrotate.d
+
+# system-specific logs may also be configured here.
