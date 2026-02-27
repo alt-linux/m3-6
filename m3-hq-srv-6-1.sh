@@ -1,5 +1,0 @@
-echo "apt-get install rsyslog tree -y && rm -rf /etc/rsyslog.d/00_common.conf && cp /down/00_common.confhq-srv /etc/rsyslog.d/00_common.conf && systemctl enable --now rsyslog && mkdir -p /opt/br-rtr && mkdir -p /opt/hq-rtr && mkdir -p /opt/br-srv"
-echo "LOGROTATE NE FACT 4TO RABOTAET"
-echo "rm -rf /etc/logrotate.conf && cp /down/logrotate.conf1 /etc/logrotate.conf && systemctl enable --now logrotate"
-echo "Proverka=logrotate -d /etc/logrotate.conf"
-echo "Proverka=tree /opt/"
